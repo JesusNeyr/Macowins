@@ -29,27 +29,41 @@
         <section class="search" >
             <h3>Encuentra lo que Buscas</h3>
             <form action="" method="get">
-                <fieldset class="contenedor-search">
-                    <input type="text" name="search" class="search-input" id="buscar" placeholder="Buscar...">
-                </fieldset>
-                <fieldset class="contenedor-enviar">
+                <div class="contenedor-search-main">
+                    <fieldset class="contenedor-search">
+                        <input type="text" name="search" class="search-input" id="buscar" placeholder="Buscar...">
+                    </fieldset>
                     <input type="submit" class="boton-enviar"></i>
-                </fieldset>
+                </div>
+                <div class="contenedor-precio-main">
+
+                    <fieldset class="contenedor-search-precio">
+                        <!-- <label for="precio">por precio</label> -->
+                        <input type="number" name="precio" min="0"  class="precio-input" id="precio" placeholder="Por precio">
+                    </fieldset>
+                    
+                    <select>
+                        <option selected value=""> Por Categoria</option>
+                        <option value="">Remera</option>
+                        <option value="">pantalones cortos</option>
+                        <option value="">jeans</option>
+                    </select>
+                </div>   
             </form>
         </section>
         
-        <section class="section-carrusel">
-            <h2>Promociones</h2>
-            <!-- contenedor de box-imagenes -->
+        <!-- <section class="section-carrusel">
+            <h2>Visitanos</h2>
+                contenedor de box-imagenes 
             <div class="contenedor-imagenes-carrusel">
-                <!-- imagenes del carrusel -->
+                imagenes del carrusel 
                 <ul>
-                    <li><img src="" alt="Images1"></li>
+                    <li><img src="https://d500.epimg.net/cincodias/imagenes/2020/05/03/companias/1588533648_456774_1588533815_noticia_normal_recorte1.jpg" alt="Images1"></li>
                     <li><img src="" alt="images2"></li>
                     <li><img src="" alt="images3" ></li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
     </main>
     <footer>
