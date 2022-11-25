@@ -1,0 +1,25 @@
+h2{
+    display: flex;
+    justify-content:center
+}
+.imagen-section{
+    display: flex;
+    flex-direction: row;
+}
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    background-color: #C9FBFF;
+    padding: 1%;
+    
+}
+footer{
+    background-color: #98D7DB;
+    padding: 1%;
+}
+main{
+    padding: 2%;
+}
