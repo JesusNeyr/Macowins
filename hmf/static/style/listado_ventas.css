@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: #161061;
+    height: 20vh;   
+}
+
+main{
+    height: 70vh;
+}
+
+.tabla{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    width: 70%;
+    border-collapse: collapse;
+}
+.tabla td{
+    
+    text-align: center;
+    border: 1px solid;
+}
+.tabla tr:hover{
+    background-color: #746AE6;
+}
+footer{
+    background-color: #161061;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 10vh;
+}
+p{
+    color: white;
+}
+h1{
+    color: white;
+   
+}
+.ul-header{
+   display: flex;
+    justify-content: space-around;
+    color: white;
+}
+ul li a { 
+
+    color:white;
+    
+}
