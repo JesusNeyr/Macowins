@@ -1,10 +1,28 @@
 from flask import redirect, url_for, render_template,request
- 
+from persistencia.persistencia import cargar_todos
+
 from Macowin import app
- 
+# # lista de diccionarios
+# productos={"nombre":"remera",
+#             "precio":2000, 
+#             "id":2,
+#             "categoria":"Short xs",         
+# }
+
+
+
+def todos_los_productos():
+   productos = []
+   for sucursal in cargar_todos().values():
+      productos += sucursal.productos
+   return productos   
+
+
 @app.route("/productos")
 def products():
-   return render_template("productos.html",buscar=request.args.get("buscar",""),precio=request.args.get("precio",""),categoria=request.args.get("categoria","todas"))
+   productos = todos_los_productos()
+   print(productos)
+   return render_template("productos.html",buscar=request.args.get("buscar",""),precio=request.args.get("precio",""),categoria=request.args.get("categoria","todas"),productos_all=productos)
 
 # @app.route("/productos",methods=['POST'])
 # def products():

@@ -25,24 +25,25 @@
         </header>
     </section>
         <main class="main-productos">   
-            {{precio}}
-            {{categoria}}
-            {{buscar}}
+            
             <section class="section-productos">
                 <h3>Productos</h3>
                 <section class="productos">
-                    <a href="/detalle">
-                        <article>
-                            <h4>Short Adidas</h4>
-                            <figure>
-                                <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
-                            </figure>
-                            <figcaption>Adidas</figcaption>
-                            
-                            <p><strong><em>Categoria:</em></strong>Remera</p>
-                            <p><strong><em>Precio:</em></strong>un precio</p>
-                        </article>
-                    </a>
+                    {%if precio=="" and buscar==""%}
+
+                        <a href="/detalle">
+                            <article>
+                                <h4>Short Adidas</h4>
+                                <figure>
+                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                </figure>
+                                <figcaption>Adidas</figcaption>
+                                
+                                <p><strong><em>Categoria:</em></strong>sds</p>
+                                <p><strong><em>Precio:</em></strong>un precio</p>
+                            </article>
+                        </a>
+                    {endif}
                     <a href="">
                         <article>
                             <h4>Remera adidas</h4>

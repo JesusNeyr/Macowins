@@ -32,9 +32,12 @@ una_sucursal_virtual.registrar_producto(pantalon)
 una_sucursal_virtual.registrar_producto(short)
 
 
-
-
-
 def alamacenar_datos_de_una_sucursal(nombre,una_sucursal):
-
     guardar(nombre,una_sucursal)
+
+
+# Ahora en la terminal podés escribir estas líneas, en función de lo que quieras probar
+# Tené en cuenta que este archivo te conviene cargarlo como python -i MacoWins.py
+# Y que si borrás los pickles generados, se borrarán también de la persistencia
+# alamacenar_datos_de_una_sucursal("fisica", una_sucursal_fisica)
+# alamacenar_datos_de_una_sucursal("virtual", una_sucursal_virtual)
