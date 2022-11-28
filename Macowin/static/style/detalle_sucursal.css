@@ -3,26 +3,22 @@
     margin: 0;
 }
 header{
-    height: 20vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    background-color: #0B0C10;
-  
-    
+    background-color: #0B0C10;    
 }
 h1{
     width: 50%;
-    color: #66FCF1;
+    color: white;
 }
 nav{
     width: 50%;
     display: flex;
-    
+   
 }
-a{
-    color: #66FCF1;
-}
+  
 .ul-header{
     display: flex;
     flex-direction: row;
@@ -32,45 +28,66 @@ a{
 .ul-li{
     width: 25%;
 }
+.a-nav{
+    color: white;
+    text-decoration: none;
+}
 main{
-    height: 70vh;
-    background-color: #45a29e;
+    height: 110vh;
+    background-color: #D8CCC4;
+    display: flex;
+    flex-direction: column;
 }
 h2{
     display: flex;
     justify-content: center;
-    color: white;
+    color: black;
+    padding-top: 5px;
 }
 .ul-h2{
     display: flex;
     flex-direction: column;
     align-items: end;
     list-style: none;
+    padding-right: 5px;
 }
 section{
     display: flex;
     flex-direction: row;
     padding: 10px 0px 10px 0px;
+    justify-content: space-evenly;
+    height: 40%;
+}
+h3{
+    padding-left: 5px;
+}
+.a-section{
+    text-decoration: none;
 }
 article{
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    height: 100%;
 }
 .productos-article{
-    list-style: none;    
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;   
     border: 1px solid;
     border-radius: 5px;
+    color: #0B0C10;
+    width: auto;
+    height: 70%
+    
+  
 }
 footer{
-    height: auto;
+    height: 10vh;
     background-color: #0B0C10;
 }
 .parrafo-footer{
-    color: #66FCF1;
+    color: white;
 }
 .ul-footer{
-    color: #66FCF1;
+    color: white;
 }
+  
