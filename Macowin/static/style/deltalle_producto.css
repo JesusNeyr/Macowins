@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 h2{
     display: flex;
     justify-content:center
@@ -5,21 +9,35 @@ h2{
 .imagen-section{
     display: flex;
     flex-direction: row;
+    
+
 }
 figure{
     display: flex;
     justify-content: center;
+    background-color: #429EFF;
+    padding: 2rem;
+    width: 50%;
 }
 
 header{
-    background-color: #C9FBFF;
-    padding: 1%;
+    background-color: #161061;
+    height: 20vh;
     
 }
 footer{
-    background-color: #98D7DB;
-    padding: 1%;
+    background-color: #161061;
+    height: 10vh;
 }
 main{
-    padding: 2%;
+    height: 70vh;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    list-style: none;
+}
+h1{
+    color: white;
 }

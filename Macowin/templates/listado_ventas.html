@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style/deltalle_producto.css">
+    <link rel="stylesheet" href="../static/style/listado_ventas.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <h1>MacoWins Store</h1>
         <nav>
-            <ul>
+            <ul class="ul-header">
             
                 <li><a href="http://" target="_blank">Home</a></li>
                 <li><a href="http://" target="_blank">Productos</a></li>
@@ -23,23 +23,31 @@
         
     </header>
     <main>
-        
-            <h2>Remera blanca</h2>
-        <section class="imagen-section">    
-            <figure> 
-                <img src="https://puraimagendigital.com.ar/2473-thickbox_default/remera-adulto-unisex-blanca-sublimable.jpg"
-                alt="Remera" width=50%>
-            </figure>
-            <ul> 
-                <li>Precio: $1000</li>
-                <li>Cantidad de Stock</li>
-                <li>Codigo de Producto</li>
-                <li>Categoria</li>
-                <li>Sucursales</li>
+        <table class="tabla">
+            <tr>
+                <th>Sucursal</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+            </tr>
+            <tr>
+                <td>virtual</td>
+                <td>remera</td>
+                <td>1000</td>
+                <td></td>
+                <td>5</td>
                 
-            </ul>
-             
-        </section>
+            </tr>
+            <tr>
+                <td>fisica</td>
+                <td>pantalon</td>
+                <td>3600</td>
+                <td></td>
+                <td>2</td>
+            </tr>
+        </table>
+
     </main>
     <footer>
         <p>Derechos reservados</p>
