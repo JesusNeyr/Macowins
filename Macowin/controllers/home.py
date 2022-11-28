@@ -1,6 +1,6 @@
 from flask import redirect, url_for, render_template
  
-from hmf import app
+from Macowin import app
  
 @app.get("/")
 def raiz():

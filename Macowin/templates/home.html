@@ -15,11 +15,11 @@
             <nav>
                 <ul>
                 
-                    <li><a href="http://" target="_blank">Home</a></li>
-                    <li><a href="http://" target="_blank">Productos</a></li>
-                    <li><a href="http://" target="_blank">Sucursales</a></li>
-                    <li><a href="http://" target="_blank">Carrito</a></li>
-
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/productos" >Productos</a></li>
+                    <li><a href="/sucursales" >Sucursales</a></li>
+                    <li><a href="/carrito" >Carrito</a></li>
+        
                 </ul>
             </nav>
             
@@ -28,27 +28,28 @@
     <main>
         <section class="search" >
             <h3>Encuentra lo que Buscas</h3>
-            <form action="" method="get">
+            <form action="/productos" method="get">
                 <div class="contenedor-search-main">
                     <fieldset class="contenedor-search">
-                        <input type="text" name="search" class="search-input" id="buscar" placeholder="Buscar...">
+                        <input type="text" name="buscar" class="search-input" id="buscar" placeholder="Buscar...">
                     </fieldset>
-                    <input type="submit" class="boton-enviar"></i>
                 </div>
                 <div class="contenedor-precio-main">
 
                     <fieldset class="contenedor-search-precio">
                         <!-- <label for="precio">por precio</label> -->
-                        <input type="number" name="precio" min="0"  class="precio-input" id="precio" placeholder="Por precio">
+                        <input type="number" name="precio" min="0"  class="precio-input" id="precio" placeholder="Por mayor precio">
                     </fieldset>
                     
-                    <select>
-                        <option selected value=""> Por Categoria</option>
-                        <option value="">Remera</option>
-                        <option value="">pantalones cortos</option>
-                        <option value="">jeans</option>
+                    <select name="categoria">
+                        <option selected value="todas"> Todas las categorias</option>
+                        <option value="remeras">Remera</option>
+                        <option value="pantalones_cortos">pantalones cortos</option>
+                        <option value="jeans">jeans</option>
+                        
                     </select>
-                </div>   
+                </div>
+                <input type="submit" class="boton-enviar"></i>
             </form>
         </section>
         
@@ -59,8 +60,8 @@
                 <!-- imagenes del carrusel  -->
                 <ul>
                     <li><img src="https://d500.epimg.net/cincodias/imagenes/2020/05/03/companias/1588533648_456774_1588533815_noticia_normal_recorte1.jpg" alt="Images1"></li>
-                    <li><img src="https://d500.epimg.net/cincodias/imagenes/2020/05/03/companias/1588533648_456774_1588533815_noticia_normal_recorte1.jpg"  alt="images2"></li>
-                    <li><img src="https://d500.epimg.net/cincodias/imagenes/2020/05/03/companias/1588533648_456774_1588533815_noticia_normal_recorte1.jpg"  alt="images3" ></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Eatoncentrertorontohall.JPG/800px-Eatoncentrertorontohall.JPG"  alt="images2"></li>
+                    <li><img src="https://cronicaglobal.elespanol.com/uploads/s1/77/81/09/9/centrocomercial1.jpeg"  alt="images3" ></li>
                 </ul>
             </div>
         </section>
