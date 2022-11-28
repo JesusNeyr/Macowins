@@ -1,14 +1,14 @@
 *{
     padding: 0;
     margin: 0;
-}
-header{
-    background-color: #161061;
-    height: 20vh;   
-}
 
+}
 main{
     height: 70vh;
+}
+.input{
+    display: flex;
+    justify-content: center;
 }
 
 .tabla{
@@ -28,20 +28,24 @@ main{
     background-color: #746AE6;
 }
 footer{
-    background-color: #161061;
+    height:5vh;
+    color: #D8CCC4;;
+    background-color: #260101;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    height: 10vh;
 }
 p{
     color: white;
 }
 h1{
     color: white;
-   
+    display: flex;
+    justify-content: center;
 }
+   
+
 .ul-header{
    display: flex;
     justify-content: space-around;
