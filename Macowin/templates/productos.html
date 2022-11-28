@@ -29,22 +29,29 @@
             <section class="section-productos">
                 <h3>Productos</h3>
                 <section class="productos">
-                    {%if precio=="" and buscar==""%}
+                    {%if categoria%}
+                        {%for producto in productos_all%}
+                            {%for categoria in producto.categoria%}
 
-                        <a href="/detalle">
-                            <article>
-                                <h4>Short Adidas</h4>
-                                <figure>
-                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
-                                </figure>
-                                <figcaption>Adidas</figcaption>
-                                
-                                <p><strong><em>Categoria:</em></strong>sds</p>
-                                <p><strong><em>Precio:</em></strong>un precio</p>
-                            </article>
-                        </a>
-                    {endif}
-                    <a href="">
+                                <a href="/detalle">
+                                    <article>
+                                        <h4>{{producto.nombre}}</h4>
+                                        <figure>
+                                            <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                        </figure>
+                                        <figcaption>{{producto.nombre}}</figcaption>
+                                        
+                                        <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                        <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                    </article>
+                                </a>
+                            
+                            {%endfor%}
+                        {%endfor%}
+                    {%elif precio>0%}
+                            <h2>Hola</h2>
+                    {%endif%}
+                    <!-- <a href="">
                         <article>
                             <h4>Remera adidas</h4>
                             <figure>
@@ -67,7 +74,7 @@
                             <figcaption>Botines Leonel Messi  Qatar2022</figcaption>
                             
                             <p><strong><em>Categoria:</em></strong>Remera</p>
-                            <p><strong><em>Precio:</em></strong>un precio</p>
+                            <p><strong><em>Precio:</em></strong>un precio</p> -->
                             
                         </article>
                     </a>
