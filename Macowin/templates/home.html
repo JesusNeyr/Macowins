@@ -11,7 +11,9 @@
 <body>
     <section class="header">
         <header>
-            <h1>MacoWins Store</h1>
+            <a href="/">
+                <h1>MacoWins</h1>
+            </a>
             <nav>
                 <ul>
                 
@@ -27,11 +29,11 @@
     </section>
     <main>
         <section class="search" >
-            <h3>Encuentra lo que Buscas</h3>
+            <h3>Encuentra la mejor ropa de verano</h3>
             <form action="/productos" method="get">
                 <div class="contenedor-search-main">
                     <fieldset class="contenedor-search">
-                        <input type="text" name="buscar" class="search-input" id="buscar" placeholder="Buscar...">
+                        <input type="text" name="buscar" class="search-input" id="buscar" placeholder="Buscar producto por nombre">
                     </fieldset>
                 </div>
                 <div class="contenedor-precio-main">
@@ -44,17 +46,18 @@
                     <select name="categoria">
                         <option selected value="todas"> Todas las categorias</option>
                         <option value="remeras">Remera</option>
-                        <option value="pantalones_cortos">pantalones cortos</option>
+                        <option value="sport">sport</option>
                         <option value="jeans">jeans</option>
-                        
+                        <option value="gala">gala</option>
+                        <option value="casual">casual</option>
                     </select>
                 </div>
-                <input type="submit" class="boton-enviar"></i>
+                <input type="submit" class="boton-enviar" value="Buscar" ></i>
             </form>
         </section>
         
         <section class="section-carrusel">
-            <h2>Visitanos</h2>
+            <h2>Los productos mas buscados</h2>
                 <!-- contenedor de box-imagenes  -->
             <div class="contenedor-imagenes-carrusel">
                 <!-- imagenes del carrusel  -->

@@ -10,7 +10,9 @@
 <body>
     <section class="header">
         <header>
-            <h1>MacoWins Store</h1>
+            <a href="/">
+                <h1>MacoWins</h1>
+            </a>
             <nav>
                 <ul>
                 
@@ -29,11 +31,24 @@
             <section class="section-productos">
                 <h3>Productos</h3>
                 <section class="productos">
-                    {%if categoria%}
+                    {%if categoria=="todas" and precio==0 and buscar==""%}
                         {%for producto in productos_all%}
-                            {%for categoria in producto.categoria%}
-
-                                <a href="/detalle">
+                            {%if producto.retornar_stock() == 0 %}
+                                <a href="/detalle" class="sin-stock">
+                                    <article>
+                                        <h4>{{producto.nombre}}</h4>
+                                        <figure>
+                                            <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                        </figure>
+                                        <figcaption>{{producto.nombre}}</figcaption>
+                                        
+                                        <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                        <p><strong><em>Precio:</em></strong>----</p>
+                                    </article>
+                                </a>
+                        
+                            {%else%}
+                                <a href="/detalle" class="stock-disponible">
                                     <article>
                                         <h4>{{producto.nombre}}</h4>
                                         <figure>
@@ -43,39 +58,129 @@
                                         
                                         <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
                                         <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                        <p>stock: {{producto.retornar_stock()}}</p>
                                     </article>
                                 </a>
+                                
+                            {%endif%}                
+                        {%endfor%}
+                    {%elif categoria!="todas" and precio==0 and buscar==""%}
+                        {%for producto in productos_all%}
+                            {%for categoria_de_producto in producto.categoria%}
+                                {%if categoria.lower()==categoria_de_producto.lower()%}
+                                    {%if producto.retornar_stock() == 0 %}
+                                        <a href="/detalle" class="sin-stock">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                                <p>{{producto.retornar_stock()}}</p>
+                                                <p>Sin stock</p>
+                                            </article>
+                                        </a>
+                                    {%else%}
+                                        <a href="/detalle" class="stock-disponible">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                                <p>{{producto.retornar_stock()}}</p>
+                                            </article>
+                                        </a>
+                                        
+                                    {%endif%}
+                                {%endif%}
                             
                             {%endfor%}
                         {%endfor%}
-                    {%elif precio>0%}
-                            <h2>Hola</h2>
+
+                    {%elif categoria=="todas" and precio>0 and buscar==""%}
+                        {%for producto in productos_all%}
+                            
+                                {%if producto.precio()>precio%}
+                                    {%if producto.retornar_stock() == 0 %}
+                                        <a href="/detalle" class="sin-stock">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                            </article>
+                                        </a>
+                                
+                                    {%else%}
+                                        <a href="/detalle" class="stock-disponible">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                                <p>stock: {{producto.retornar_stock()}}</p>
+                                            </article>
+                                        </a>
+                                        
+                                    {%endif%}                
+                                {%endif%}
+                            
+                            
+                        {%endfor%}
+                    {%elif categoria=="todas" and precio==0 and buscar!=""%}
+                        {%for producto in productos_all%}
+                            
+                                {%if producto.nombre.lower()==buscar.lower()%}
+                                    {%if producto.retornar_stock() == 0 %}
+                                        <a href="/detalle" class="sin-stock">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                            </article>
+                                        </a>
+                                
+                                    {%else%}
+                                        <a href="/detalle" class="stock-disponible">
+                                            <article>
+                                                <h4>{{producto.nombre}}</h4>
+                                                <figure>
+                                                    <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc411e695/products/AD_GL5411/AD_GL5411-1.JPG" alt="remera verano">
+                                                </figure>
+                                                <figcaption>{{producto.nombre}}</figcaption>
+                                                
+                                                <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
+                                                <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
+                                                <p>stock: {{producto.retornar_stock()}}</p>
+                                            </article>
+                                        </a>
+                                        
+                                    {%endif%}                
+                                {%endif%}
+                            
+                            
+                        {%endfor%}
                     {%endif%}
-                    <!-- <a href="">
-                        <article>
-                            <h4>Remera adidas</h4>
-                            <figure>
-                                <img src="https://www.blowland.com.ar/1793-large_default/adidas-originals-remera-lifestyle-hombre-trefoil-negro-camo-.jpg" alt="short verano">
-                            </figure>
-                            <figcaption>remera casual addidas</figcaption>
-                            
-                            <p><strong><em>Categoria:</em></strong>Remera</p>
-                            <p><strong><em>Precio:</em></strong>un precio</p>
-                        </article>
-
-                    </a>
-                    <a href="" class="opacidad">
-
-                        <article>
-                            <h4>Botines Qatar2022</h4>
-                            <figure>
-                                <img src="https://phantom-marca.unidadeditorial.es/3fd0422b7dd8ba6d87eaa7bf8d799ae9/resize/1320/f/jpg/assets/multimedia/imagenes/2022/11/18/16687852357915.jpg" alt="zapatillas qatar2022">
-                            </figure>
-                            <figcaption>Botines Leonel Messi  Qatar2022</figcaption>
-                            
-                            <p><strong><em>Categoria:</em></strong>Remera</p>
-                            <p><strong><em>Precio:</em></strong>un precio</p> -->
-                            
                         </article>
                     </a>
                 </section>
