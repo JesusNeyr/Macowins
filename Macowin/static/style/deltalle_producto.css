@@ -3,19 +3,20 @@
     margin: 0;
     
 }
+
 h2{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 img{
     height: 100%;
+    border-radius: 10%;
 }
 main{
    
     height: 70vh;
 
 }
-   
 
 section{
     display: flex;
@@ -28,15 +29,11 @@ figure{
     box-sizing: border-box;
     font-family: sans-serif;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .section-ul{
-
-    width: 50%;
-}
-
-
-ul{
     display: flex;
     flex-direction: column;
     width: 50%;
