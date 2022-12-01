@@ -18,8 +18,8 @@
                 
                     <li><a href="/">Home</a></li>
                     <li><a href="/productos">Productos</a></li>
-                    <li><a href="/sucursales">Sucursales</a></li>
-                    <li><a href="/carrito">Carrito</a></li>
+                    <li><a href="/listado_de_sucursales">Sucursales</a></li>
+                    <li><a href="/listado_ventas">Carrito</a></li>
 
                 </ul>
             </nav>
@@ -43,7 +43,7 @@
                                         <figcaption>{{producto.nombre}}</figcaption>
                                         
                                         <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
-                                        <p><strong><em>Precio:</em></strong>----</p>
+                                        <p><strong><em>Precio:</em></strong>___</p>
                                     </article>
                                 </a>
                         
@@ -58,7 +58,7 @@
                                         
                                         <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
                                         <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
-                                        <p>stock: {{producto.retornar_stock()}}</p>
+                                    
                                     </article>
                                 </a>
                                 
@@ -133,7 +133,7 @@
                                                 
                                                 <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
                                                 <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
-                                                <p>stock: {{producto.retornar_stock()}}</p>
+                                                
                                             </article>
                                         </a>
                                         
@@ -171,7 +171,7 @@
                                                 
                                                 <p><strong><em>Categoria:</em></strong>{{producto.categoria[0]}}</p>
                                                 <p><strong><em>Precio:</em></strong>$ {{producto.retornar_precio()}}</p>
-                                                <p>stock: {{producto.retornar_stock()}}</p>
+                                               
                                             </article>
                                         </a>
                                         
