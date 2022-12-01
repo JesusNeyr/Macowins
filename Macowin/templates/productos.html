@@ -34,7 +34,7 @@
                     {%if categoria=="todas" and precio==0 and buscar==""%}
                         {%for producto in productos_all%}
                             {%if producto.retornar_stock() == 0 %}
-                                <a href="/detalle" class="sin-stock">
+                                <a href="/detalle_producto" class="sin-stock">
                                     <article>
                                         <h4>{{producto.nombre}}</h4>
                                         <figure>
@@ -48,7 +48,7 @@
                                 </a>
                         
                             {%else%}
-                                <a href="/detalle" class="stock-disponible">
+                                <a href="/detalle_producto" class="stock-disponible">
                                     <article>
                                         <h4>{{producto.nombre}}</h4>
                                         <figure>
@@ -69,7 +69,7 @@
                             {%for categoria_de_producto in producto.categoria%}
                                 {%if categoria.lower()==categoria_de_producto.lower()%}
                                     {%if producto.retornar_stock() == 0 %}
-                                        <a href="/detalle" class="sin-stock">
+                                        <a href="/detalle_producto" class="sin-stock">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
@@ -84,7 +84,7 @@
                                             </article>
                                         </a>
                                     {%else%}
-                                        <a href="/detalle" class="stock-disponible">
+                                        <a href="/detalle_producto" class="stock-disponible">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
@@ -109,7 +109,7 @@
                             
                                 {%if producto.precio()>precio%}
                                     {%if producto.retornar_stock() == 0 %}
-                                        <a href="/detalle" class="sin-stock">
+                                        <a href="/detalle_producto" class="sin-stock">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
@@ -123,7 +123,7 @@
                                         </a>
                                 
                                     {%else%}
-                                        <a href="/detalle" class="stock-disponible">
+                                        <a href="/detalle_producto" class="stock-disponible">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
@@ -147,7 +147,7 @@
                             
                                 {%if producto.nombre.lower()==buscar.lower()%}
                                     {%if producto.retornar_stock() == 0 %}
-                                        <a href="/detalle" class="sin-stock">
+                                        <a href="/detalle_producto" class="sin-stock">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
@@ -161,7 +161,7 @@
                                         </a>
                                 
                                     {%else%}
-                                        <a href="/detalle" class="stock-disponible">
+                                        <a href="/detalle_producto" class="stock-disponible">
                                             <article>
                                                 <h4>{{producto.nombre}}</h4>
                                                 <figure>
