@@ -107,7 +107,7 @@
                     {%elif categoria=="todas" and precio>0 and buscar==""%}
                         {%for producto in productos_all%}
                             
-                                {%if producto.precio()>precio%}
+                                {%if precio>producto.precio()%}
                                     {%if producto.retornar_stock() == 0 %}
                                         <a href="/detalle_producto" class="sin-stock">
                                             <article>
