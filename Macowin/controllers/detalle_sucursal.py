@@ -9,6 +9,5 @@ def todos_los_productos():
     return productos
 
 @app.get("/detalle_sucursal")
-def detalles_sucursal():
-    productos= todos_los_productos()
-    return render_template("detalle_sucursal.html",productos)
+def detalle_sucursal():
+    return render_template("detalle_sucursal.html")

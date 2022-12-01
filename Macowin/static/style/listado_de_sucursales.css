@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+body{
+    background-color: #D8CCC4;
+}
